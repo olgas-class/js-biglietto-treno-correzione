@@ -12,6 +12,10 @@ const pricePerKm = 0.21;
 const userKm = parseFloat(prompt("Quanti km vuoi percorrere?"));
 console.log(userKm, typeof userKm);
 
+if (isNaN(userKm)) {
+    alert("ricarica la pagina e inserisci un valore valido");
+}
+
 // Chiedere l'età del passeggero
 const userAge = parseInt(prompt("Quanti anni ha il passeggero?"));
 console.log(userAge, typeof userAge);
@@ -47,3 +51,48 @@ document.getElementById("result").innerHTML = `
     <p>Lo sconto è di ${discountPercentage}%</p>
     <h2>Il prezzo finale è €${finalPrice}</h2>
 `;
+
+
+// let discout;
+// let price = 21;
+// let finalPrice = price - discout;
+
+// const userName = "Olga";
+// document.getElementById("greeting").innerHTML += userName;
+// 
+// let price = 24;
+// let discount = price * 0.1;
+// price += discount;
+// console.log(price);
+
+// // // numeri da 5 a 10
+// // const rndNumber = Math.floor(Math.random() * (10 - 5 + 1) ) + 5
+// // console.log(rndNumber);
+// // 
+// // // Date
+// const now = new Date();
+// const nowHour = now.getHours();
+// alert(nowHour)
+
+const userFruit = "arancia";
+
+// if (userFruit === "mela") {
+//     console.log("Una mela al giorno toglie medico di torno");
+// } else if (userFruit === "arancia") {
+//     console.log("L'rancia ha tanta vitamina C");
+// } else {
+//     console.log("Questo frutto è inutile");
+// }
+
+switch (userFruit) {
+    case "mela": 
+        console.log("Una mela al giorno toglie medico di torno");
+        break;
+    
+    case "arancia": 
+        console.log("L'rancia ha tanta vitamina C");
+        break;
+    
+    default: 
+        console.log("Questo frutto è inutile");
+}
